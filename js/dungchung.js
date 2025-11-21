@@ -412,7 +412,7 @@ function addTags(nameTag, link) {
         new_tag.href = link;
         new_tag.textContent = nameTag;
     } else {
-        // Nếu không có link thì dùng performSearch (cho trang trangchu.html)
+        // Nếu không có link thì dùng performSearch (cho trang index.html)
         new_tag.href = 'javascript:void(0)';
         new_tag.textContent = nameTag;
         new_tag.onclick = function(e) {
@@ -472,7 +472,7 @@ function addHeader() {
         <div class="container">
             <!-- Logo -->
             <div class="logo">
-                <a href="trangchu.html">
+                <a href="index.html">
                     <img src="img/logo.png" alt="NDC Shop" />
                 </a>
             </div>
@@ -750,7 +750,7 @@ function addFooter() {
 
     <!-- ============== Footer ============= -->
     <div class="copy-right">
-        <p><a href="trangchu.html">NDC Shop</a> - Welcome to NDC Shop - Designed by 
+        <p><a href="index.html">NDC Shop</a> - Welcome to NDC Shop - Designed by 
             <span style="color: #eee; font-weight: bold">NDC</span></p>
     </div>`);
 }
