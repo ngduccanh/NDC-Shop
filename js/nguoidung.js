@@ -9,7 +9,7 @@ window.onload = function () {
 
     // thêm tags (từ khóa) vào khung tìm kiếm
     var tags = ["Samsung", "iPhone", "Huawei", "Oppo" ];
-    for (var t of tags) addTags(t, "index.html?search=" + t);
+    for (var t of tags) addTags(t, "trangchu.html?search=" + t);
 
     currentUser = getCurrentUser();
 

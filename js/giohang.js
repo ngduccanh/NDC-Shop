@@ -6,7 +6,7 @@ window.onload = function () {
 
 	// thêm tags (từ khóa) vào khung tìm kiếm
 	var tags = ["Samsung", "iPhone", "Huawei", "Oppo"];
-	for (var t of tags) addTags(t, "index.html?search=" + t)
+	for (var t of tags) addTags(t, "trangchu.html?search=" + t)
 
 	currentuser = getCurrentUser();
 	addProductToTable(currentuser);
@@ -45,7 +45,7 @@ function addProductToTable(user) {
 				</div>
 				<h3>Giỏ hàng trống</h3>
 				<p>Bạn chưa có sản phẩm nào trong giỏ hàng</p>
-				<a href="index.html" class="empty-cart-btn">
+				<a href="trangchu.html" class="empty-cart-btn">
 					<i class="fa fa-shopping-bag"></i> Mua sắm ngay
 				</a>
 			</div>
