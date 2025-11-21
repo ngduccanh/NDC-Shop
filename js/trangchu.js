@@ -23,9 +23,6 @@ window.onload = function () {
 	});
 	});
 
-	// autocomplete đã bị loại bỏ - tìm kiếm hoạt động qua performSearch()
-
-
 	// Thêm danh sách hãng điện thoại "Xiaomi.png",
 		// "Realme.png", "Vivo.jpg", "Philips.jpg", "Mobell.jpg", "Mobiistar.jpg", "Itel.jpg",
 		// "Coolpad.png", "HTC.jpg", "Motorola.jpg"  "Nokia.jpg"

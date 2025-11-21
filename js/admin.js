@@ -849,14 +849,6 @@ function getValueOfTypeInTable_DonHang(tr, loai) {
 }
 
 // ====================== Khách Hàng =============================
-// Vẽ bảng
-// Button mở/khóa tài khoản <div class="tooltip">
-//                     <label class="switch">
-//                         <input type="checkbox" `+(u.off?'':'checked')+` onclick="voHieuHoaNguoiDung(this, '`+u.username+`')">
-//                         <span class="slider round"></span>
-//                     </label>
-//                     <span class="tooltiptext">`+(u.off?'Mở':'Khóa')+`</span>
-//                 </div>
 function addTableKhachHang() {
     var tc = document.getElementsByClassName('khachhang')[0].getElementsByClassName('table-content')[0];
     var s = `<table class="table-outline hideImg">`;
@@ -965,7 +957,6 @@ function getValueOfTypeInTable_KhachHang(tr, loai) {
 }
 
 // ================== Sort ====================
-// https://github.com/HoangTran0410/First_html_css_js/blob/master/sketch.js
 var decrease = true; // Sắp xếp giảm dần
 
 // loại là tên cột, func là hàm giúp lấy giá trị từ cột loai
@@ -1028,9 +1019,3 @@ function progress(percent, bg, width, height) {
                 <div class="progress-bar bg-info" style="width: ` + percent + `%; background-color:` + bg + `"></div>
             </div>`
 }
-
-// for(var i = 0; i < list_products.length; i++) {
-//     list_products[i].masp = list_products[i].company.substring(0, 3) + vitriCompany(list_products[i], i);
-// }
-
-// console.log(JSON.stringify(list_products));

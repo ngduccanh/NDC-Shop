@@ -1,6 +1,4 @@
-/* ============================= */
-/* 🌟 BANNER TIN TỨC */
-/* ============================= */
+/* BANNER TIN TỨC */
 .news-banner {
     background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
     height: 280px;
@@ -41,18 +39,14 @@
     opacity: 0.95;
 }
 
-/* ============================= */
-/* 🌟 CONTAINER */
-/* ============================= */
+/* CONTAINER */
 .news-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 20px;
 }
 
-/* ============================= */
-/* 🌟 HEADER SECTION */
-/* ============================= */
+/* HEADER SECTION */
 .news-header {
     display: flex;
     justify-content: space-between;
@@ -103,9 +97,7 @@
     box-shadow: 0 4px 8px rgba(215, 0, 24, 0.2);
 }
 
-/* ============================= */
-/* 🌟 GRID TIN TỨC */
-/* ============================= */
+/* GRID TIN TỨC */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -113,9 +105,7 @@
     margin-bottom: 50px;
 }
 
-/* ============================= */
-/* 🌟 CARD TIN TỨC */
-/* ============================= */
+/* CARD TIN TỨC */
 .news-card {
     background: white;
     border-radius: 16px;
@@ -136,9 +126,7 @@
     display: block;
 }
 
-/* ============================= */
-/* 🌟 HÌNH ẢNH */
-/* ============================= */
+/* HÌNH ẢNH */
 .news-image {
     position: relative;
     width: 100%;
@@ -175,9 +163,7 @@
     animation: pulse 2s infinite;
 }
 
-/* ============================= */
-/* 🌟 NỘI DUNG */
-/* ============================= */
+/* NỘI DUNG */
 .news-content {
     padding: 24px;
 }
@@ -270,9 +256,7 @@
     gap: 10px;
 }
 
-/* ============================= */
-/* 🌟 PAGINATION */
-/* ============================= */
+/* PAGINATION */
 .news-pagination {
     display: flex;
     justify-content: center;
@@ -301,9 +285,7 @@
     transform: translateY(-2px);
 }
 
-/* ============================= */
-/* 🌟 ANIMATIONS */
-/* ============================= */
+/* ANIMATIONS */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -335,9 +317,7 @@
     }
 }
 
-/* ============================= */
-/* 🌟 RESPONSIVE */
-/* ============================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .news-overlay h1 {
         font-size: 28px;

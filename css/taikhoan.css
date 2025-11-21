@@ -1,6 +1,4 @@
-/* ============================= */
-/* 🌟 CONTAINER TÀI KHOẢN - CELLPHONES STYLE */
-/* ============================= */
+/* CONTAINER TÀI KHOẢN - CELLPHONES STYLE */
 .containTaikhoan {
   position: fixed;
   top: 0;
@@ -88,9 +86,7 @@
   text-decoration: underline;
 }
 
-/* ============================= */
-/* 🌟 TAB GROUP - ĐĂNG NHẬP/ĐĂNG KÝ */
-/* ============================= */
+/* TAB GROUP - ĐĂNG NHẬP/ĐĂNG KÝ */
 .tab-group {
   list-style: none;
   padding: 0;
@@ -161,9 +157,7 @@
   letter-spacing: -0.5px;
 }
 
-/* ============================= */
-/* 🌟 LABEL - FLOATING EFFECT */
-/* ============================= */
+/* LABEL - FLOATING EFFECT */
 .taikhoan label {
   position: absolute;
   -webkit-transform: translateY(16px);
@@ -203,9 +197,7 @@
   color: #d70018;
 }
 
-/* ============================= */
-/* 🌟 INPUT FIELDS */
-/* ============================= */
+/* INPUT FIELDS */
 .taikhoan input,
 .taikhoan textarea {
   font-size: 15px;
@@ -241,9 +233,7 @@
   min-height: 100px;
 }
 
-/* ============================= */
-/* 🌟 FIELD LAYOUT */
-/* ============================= */
+/* FIELD LAYOUT */
 .field-wrap {
   position: relative;
   margin-bottom: 24px;
@@ -269,9 +259,7 @@
   margin: 0;
 }
 
-/* ============================= */
-/* 🌟 BUTTON SUBMIT */
-/* ============================= */
+/* BUTTON SUBMIT */
 .taikhoan .button {
   border: 0;
   outline: none;
@@ -332,9 +320,7 @@
   font-size: 14px;
 }
 
-/* ============================= */
-/* 🌟 RESPONSIVE */
-/* ============================= */
+/* RESPONSIVE */
 @media (max-width: 600px) {
   .taikhoan {
     padding: 35px 25px;
@@ -365,9 +351,7 @@
   }
 }
 
-/* ============================= */
-/* 🌟 THÊM LOGO/ICON (optional) */
-/* ============================= */
+/* THÊM LOGO/ICON (optional) */
 .taikhoan::before {
   content: '🔐';
   display: block;

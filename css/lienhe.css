@@ -1,6 +1,4 @@
-/* ============================= */
-/* 🌟 BANNER LIÊN HỆ */
-/* ============================= */
+/* BANNER LIÊN HỆ */
 .contact-banner {
     background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
     height: 280px;
@@ -41,18 +39,14 @@
     opacity: 0.95;
 }
 
-/* ============================= */
-/* 🌟 CONTAINER */
-/* ============================= */
+/* CONTAINER */
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 20px;
 }
 
-/* ============================= */
-/* 🌟 LIÊN HỆ NHANH */
-/* ============================= */
+/* LIÊN HỆ NHANH */
 .quick-contact {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -126,18 +120,14 @@
     line-height: 1.6;
 }
 
-/* ============================= */
-/* 🌟 NỘI DUNG CHÍNH */
-/* ============================= */
+/* NỘI DUNG CHÍNH */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-/* ============================= */
-/* 🌟 FORM LIÊN HỆ */
-/* ============================= */
+/* FORM LIÊN HỆ */
 .contact-form-section {
     background: white;
     padding: 40px;
@@ -249,9 +239,7 @@
     transform: translateY(0);
 }
 
-/* ============================= */
-/* 🌟 BẢN ĐỒ */
-/* ============================= */
+/* BẢN ĐỒ */
 .map-section {
     display: flex;
     flex-direction: column;
@@ -282,9 +270,7 @@
     border: none;
 }
 
-/* ============================= */
-/* 🌟 THÔNG TIN NGÂN HÀNG */
-/* ============================= */
+/* THÔNG TIN NGÂN HÀNG */
 .bank-info {
     background: white;
     padding: 30px;
@@ -318,9 +304,7 @@
     min-width: 140px;
 }
 
-/* ============================= */
-/* 🌟 ANIMATIONS */
-/* ============================= */
+/* ANIMATIONS */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -343,9 +327,7 @@
     }
 }
 
-/* ============================= */
-/* 🌟 RESPONSIVE */
-/* ============================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .contact-overlay h1 {
         font-size: 28px;

@@ -141,7 +141,6 @@ hr {
 }
 
 /* ==================== css thêm , chưa sử dụng ========================= */
-/* tooltip https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 */
 .tooltip {
     position: absolute;
     display: inline-block;
@@ -270,8 +269,4 @@ hr {
 .search-bar:hover {
     box-shadow: 0 0 10px rgba(230, 0, 18, 0.2);
 }
-/* .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
+

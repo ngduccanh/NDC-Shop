@@ -2,8 +2,6 @@ var currentuser; // user hiện tại, biến toàn cục
 window.onload = function () {
     khoiTao();
 
-	// autocomplete đã bị loại bỏ - tìm kiếm hoạt động qua performSearch()
-
 	// thêm tags (từ khóa) vào khung tìm kiếm
 	var tags = ["Samsung", "iPhone", "Huawei", "Oppo"];
 	for (var t of tags) addTags(t, "index.html?search=" + t)

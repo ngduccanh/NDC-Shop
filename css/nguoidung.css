@@ -1,6 +1,4 @@
-/* ============================= */
-/* 🌟 TRANG NGƯỜI DÙNG - CELLPHONES STYLE */
-/* ============================= */
+/* TRANG NGƯỜI DÙNG - CELLPHONES STYLE */
 
 /* Container chính */
 section {
@@ -8,9 +6,7 @@ section {
     padding: 30px 0 50px;
 }
 
-/* ============================= */
-/* 🌟 THÔNG TIN NGƯỜI DÙNG */
-/* ============================= */
+/* THÔNG TIN NGƯỜI DÙNG */
 .infoUser {
     max-width: 900px;
     margin: 0 auto 30px;
@@ -108,9 +104,7 @@ section {
     box-shadow: none;
 }
 
-/* ============================= */
-/* 🌟 NÚT SỬA THÔNG TIN */
-/* ============================= */
+/* NÚT SỬA THÔNG TIN */
 .infoUser .fa-pencil {
     display: inline-block;
     text-align: center;
@@ -150,9 +144,7 @@ section {
     box-shadow: 0 6px 16px rgba(215, 0, 24, 0.4);
 }
 
-/* ============================= */
-/* 🌟 KHUNG ĐỔI MẬT KHẨU */
-/* ============================= */
+/* KHUNG ĐỔI MẬT KHẨU */
 #khungDoiMatKhau {
     padding: 0;
     background: #fafafa;
@@ -227,9 +219,7 @@ section {
     transform: translateY(0);
 }
 
-/* ============================= */
-/* 🌟 DANH SÁCH ĐƠN HÀNG */
-/* ============================= */
+/* DANH SÁCH ĐƠN HÀNG */
 .listDonHang {
     max-width: 1200px;
     margin: 0 auto 30px;
@@ -415,9 +405,7 @@ section {
     display: none;
 }
 
-/* ============================= */
-/* 🌟 RESPONSIVE */
-/* ============================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .infoUser,
     .listDonHang {

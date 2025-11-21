@@ -29,7 +29,6 @@ a {
 header {
     z-index: 10;
     width: 100%;
-    /* position: sticky; */
     padding: 16px 10px;
     background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
     border-bottom: 1px solid #23282c;
@@ -45,7 +44,6 @@ header h2 {
 
 /* =========== Menu ================= */
 .sidebar {
-    /* Convert vertical sidebar to top horizontal menu */
     float: none;
     width: 100%;
     position: sticky;

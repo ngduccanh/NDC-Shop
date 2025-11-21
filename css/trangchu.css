@@ -213,9 +213,7 @@
 	color: #000;
 }
 
-/* ============================= */
-/* 🌟 BỘ LỌC - FILTER BAR */
-/* ============================= */
+/* BỘ LỌC - FILTER BAR */
 .filter-bar {
     display: flex;
     justify-content: center;

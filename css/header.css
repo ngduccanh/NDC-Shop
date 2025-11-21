@@ -1,6 +1,4 @@
-/* ============================= */
-/* 🌟 THANH TRÊN CÙNG (TOP BAR) */
-/* ============================= */
+/* THANH TRÊN CÙNG (TOP BAR) */
 .top-bar {
     background-color: #d70018;
     color: #fff;
@@ -48,9 +46,7 @@
     text-decoration: underline;
 }
 
-/* ============================= */
-/* 🌟 HEADER CHÍNH */
-/* ============================= */
+/* HEADER CHÍNH */
 .header {
     background-color: #fff;
     border-bottom: 1px solid #eee;
@@ -79,9 +75,7 @@
     transform: scale(1.05);
 }
 
-/* ============================= */
-/* 🌟 THANH TÌM KIẾM */
-/* ============================= */
+/* THANH TÌM KIẾM */
 .search-area {
     display: flex;
     flex-direction: column;
@@ -95,8 +89,8 @@
     display: flex;
     align-items: center;
     width: 100% !important;
-    max-width: 800px !important; /* ✅ Tăng lên 800px và thêm !important */
-    min-width: 600px; /* ✅ Thêm min-width để chắc chắn */
+    max-width: 800px !important; /* Tăng lên 800px và thêm !important */
+    min-width: 600px; /* Thêm min-width để chắc chắn */
     justify-content: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Thêm shadow nhẹ */
     border-radius: 25px;
@@ -104,11 +98,11 @@
 
 .search-bar input {
     flex: 1;
-    padding: 12px 20px; /* ✅ Tăng padding từ 8px 14px lên 12px 20px */
-    border: 2px solid #e0e0e0; /* ✅ Border dày hơn và màu nhẹ hơn */
+    padding: 12px 20px; /* Tăng padding từ 8px 14px lên 12px 20px */
+    border: 2px solid #e0e0e0; /* Border dày hơn và màu nhẹ hơn */
     border-radius: 25px 0 0 25px;
     outline: none;
-    font-size: 15px; /* ✅ Tăng font từ 14px lên 15px */
+    font-size: 15px; /* Tăng font từ 14px lên 15px */
     color: #333;
     transition: all 0.3s ease;
     background-color: #fff;
@@ -119,7 +113,7 @@
 }
 .search-bar input:focus {
     border-color: #d70018;
-    box-shadow: 0 0 8px rgba(215, 0, 24, 0.2); /* ✅ Shadow đậm hơn khi focus */
+    box-shadow: 0 0 8px rgba(215, 0, 24, 0.2); /* Shadow đậm hơn khi focus */
     transform: translateY(-1px);
 }
 
@@ -127,10 +121,10 @@
     background-color: #d70018;
     color: #fff;
     border: none;
-    padding: 12px 24px; /* ✅ Tăng padding từ 8px 14px lên 12px 24px */
+    padding: 12px 24px; /* Tăng padding từ 8px 14px lên 12px 24px */
     border-radius: 0 25px 25px 0;
     cursor: pointer;
-    font-size: 16px; /* ✅ Tăng icon size */
+    font-size: 16px; /* Tăng icon size */
     transition: all 0.3s ease;
     min-width: 50px;
 }
@@ -140,7 +134,7 @@
     box-shadow: 0 4px 12px rgba(215, 0, 24, 0.3);
 }
 
-/* 🌟 Gợi ý thương hiệu */
+/* Gợi ý thương hiệu */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -171,7 +165,7 @@
     transform: translateY(-1px);
 }
 
-/* 🌟 Dropdown gợi ý tìm kiếm */
+/* Dropdown gợi ý tìm kiếm */
 .suggestions-dropdown {
     position: absolute;
     top: calc(100% + 4px);
@@ -308,9 +302,7 @@
 }
 
 
-/* ============================= */
-/* 🌟 TÀI KHOẢN & GIỎ HÀNG */
-/* ============================= */
+/* TÀI KHOẢN & GIỎ HÀNG */
 .header-actions {
     display: flex;
     align-items: flex-start; /* Căn trên cùng để các nút thẳng hàng */
@@ -426,9 +418,7 @@
     font-size: 14px;
 }
 
-/* ============================= */
-/* 🌟 MENU DROPDOWN */
-/* ============================= */
+/* MENU DROPDOWN */
 .menu-dropdown {
     position: relative;
 }
@@ -497,9 +487,7 @@
     font-size: 14px;
 }
 
-/* ============================= */
-/* 🌟 MENU MOBILE */
-/* ============================= */
+/* MENU MOBILE */
 .menu-toggle {
     background: none;
     border: none;
@@ -508,9 +496,7 @@
     color: #333;
 }
 
-/* ============================= */
-/* 🌟 RESPONSIVE */
-/* ============================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .top-bar {
         flex-direction: column;

@@ -11,8 +11,6 @@ window.onload = function () {
 
     phanTich_URL_chiTietSanPham();
 
-    // autocomplete đã bị loại bỏ - tìm kiếm hoạt động qua performSearch()
-
     // Thêm gợi ý sản phẩm
     sanPhamHienTai && suggestion();
 }
