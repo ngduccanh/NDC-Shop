@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tin tức - SmartPoint</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/tintuc.css">
+
+    <!-- js -->
+    <script src="data/products.js"></script>
+	<script src="js/dungchung.js"></script>
+    <script>
+        window.onload = function () {
+            khoiTao();
+            // thêm tags (từ khóa) vào khung tìm kiếm
+            var tags = ["Samsung", "iPhone", "Huawei", "Oppo"];
+            for (var t of tags) addTags(t, "index.html?search=" + t);
+        }
+    </script>
+
+</head>
+
+<body>
+    <script> addTopNav();</script>
+
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+
+        <!-- Banner tin tức -->
+        <div class="news-banner">
+            <div class="news-overlay">
+                <h1>Tin Tức Công Nghệ</h1>
+                <p>Cập nhật những tin tức mới nhất về thế giới smartphone</p>
+            </div>
+        </div>
+
+        <!-- Container tin tức -->
+        <div class="news-container">
+            <!-- Header section -->
+            <div class="news-header">
+                <h2><i class="fa fa-newspaper-o"></i> Tin Tức Nổi Bật</h2>
+                <div class="news-filter">
+                    <button class="filter-btn active">Tất cả</button>
+                    <button class="filter-btn">Apple</button>
+                    <button class="filter-btn">Samsung</button>
+                    <button class="filter-btn">Huawei</button>
+                    <button class="filter-btn">Oppo</button>
+                </div>
+            </div>
+
+            <!-- Grid tin tức -->
+            <div class="news-grid">
+                <!-- Bài viết 1 -->
+                <article class="news-card">
+                    <a href="https://support.apple.com/vi-vn/121032" target="_blank">
+                        <div class="news-image">
+                            <img src="img/tintuc/tintuc1.png" alt="iPhone 16">
+                            <div class="news-badge hot">HOT</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-brand apple"><i class="fa fa-apple"></i> Apple</span>
+                                <span class="news-time"><i class="fa fa-clock-o"></i> 3 giờ trước</span>
+                            </div>
+                            <h3>iPhone 16 siêu sản phẩm đáng mong chờ trong năm nay</h3>
+                            <p class="news-excerpt">Khám phá những tính năng đột phá và cải tiến vượt trội trên thế hệ iPhone mới nhất từ Apple.</p>
+                            <div class="read-more">
+                                Xem chi tiết <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Bài viết 2 -->
+                <article class="news-card">
+                    <a href="https://thanhnien.vn/cong-nghe/kham-pha-smartphone-man-hinh-gap-duoc-dau-tien-cua-samsung-1027111.html" target="_blank">
+                        <div class="news-image">
+                            <img src="img/tintuc/tintuc2.png" alt="Titanium Design">
+                            <div class="news-badge">MỚI</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-brand apple"><i class="fa fa-apple"></i> Apple</span>
+                                <span class="news-time"><i class="fa fa-clock-o"></i> 6 giờ trước</span>
+                            </div>
+                            <h3>Sự đột phá về thiết kế đến từ sự nhẹ nhàng của Titanium</h3>
+                            <p class="news-excerpt">Vật liệu titanium cao cấp mang đến trải nghiệm cầm nắm sang trọng và bền bỉ vượt trội.</p>
+                            <div class="read-more">
+                                Xem chi tiết <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Bài viết 3 -->
+                <article class="news-card">
+                    <a href="https://laodongthudo.vn/huawei-ra-mat-dien-thoai-mate-xt-gap-3-dau-tien-tren-the-gioi-co-gia-2800usd-177133.html" target="_blank">
+                        <div class="news-image">
+                            <img src="img/tintuc/tintuc3.png" alt="Huawei Mate XT">
+                            <div class="news-badge hot">HOT</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-brand huawei"><i class="fa fa-mobile"></i> Huawei</span>
+                                <span class="news-time"><i class="fa fa-clock-o"></i> 6 giờ trước</span>
+                            </div>
+                            <h3>Khám phá chiếc điện thoại đầu tiên với thiết kế gập 3 của nhà Huawei</h3>
+                            <p class="news-excerpt">Huawei Mate XT - điện thoại gập 3 màn hình đầu tiên trên thế giới với mức giá 2,800 USD.</p>
+                            <div class="read-more">
+                                Xem chi tiết <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Bài viết 4 -->
+                <article class="news-card">
+                    <a href="http://vietq.vn/chiec-dien-thoai-thong-minh-nay-cua-lg-se-co-toi-16-camera-d151674.html" target="_blank">
+                        <div class="news-image">
+                            <img src="img/tintuc/tintuc4.jpg" alt="Samsung S25 Ultra">
+                            <div class="news-badge">MỚI</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-brand samsung"><i class="fa fa-mobile"></i> Samsung</span>
+                                <span class="news-time"><i class="fa fa-clock-o"></i> 1 giờ trước</span>
+                            </div>
+                            <h3>Sự đột phá tương lai với tích hợp sẵn AI trên S25 Ultra</h3>
+                            <p class="news-excerpt">Galaxy S25 Ultra mang đến trải nghiệm AI thông minh, tối ưu hóa mọi tác vụ hàng ngày.</p>
+                            <div class="read-more">
+                                Xem chi tiết <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Bài viết 5 -->
+                <article class="news-card">
+                    <a href="https://www.viettablet.com/oppo-find-x8-va-x8-pro-ra-mat" target="_blank">
+                        <div class="news-image">
+                            <img src="img/tintuc/tintuc5.jpg" alt="OPPO Find X8">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-brand oppo"><i class="fa fa-mobile"></i> Oppo</span>
+                                <span class="news-time"><i class="fa fa-clock-o"></i> 9 giờ trước</span>
+                            </div>
+                            <h3>OPPO Find X8 và X8 Pro ra mắt: Chip Dimensity 9400, nút chụp ảnh chuyên dụng</h3>
+                            <p class="news-excerpt">Bộ đôi flagship mới nhất của OPPO với hiệu năng mạnh mẽ và camera chuyên nghiệp.</p>
+                            <div class="read-more">
+                                Xem chi tiết <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Bài viết 6 - Placeholder -->
+                <article class="news-card">
+                    <a href="#" target="_blank">
+                        <div class="news-image">
+                            <img src="img/tintuc/tintuc1.png" alt="Tin tức công nghệ">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-brand apple"><i class="fa fa-apple"></i> Apple</span>
+                                <span class="news-time"><i class="fa fa-clock-o"></i> 12 giờ trước</span>
+                            </div>
+                            <h3>Cập nhật iOS mới nhất mang đến nhiều tính năng hữu ích</h3>
+                            <p class="news-excerpt">Apple phát hành bản cập nhật iOS với nhiều cải tiến về hiệu năng và bảo mật.</p>
+                            <div class="read-more">
+                                Xem chi tiết <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="news-pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">...</button>
+                <button class="page-btn">10</button>
+            </div>
+        </div>
+
+        <script> addPlc(); </script>
+    </section>
+
+    <script> addContainTaiKhoan(); </script>
+
+    <div class="footer">
+        <script>addFooter();</script>
+        
+    </div>
+
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+
+</body>
+
+</html>

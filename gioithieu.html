@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giới thiệu - SmartPoint</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+        
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gioithieu.css">
+
+    <!-- js -->
+    <script src="data/products.js"></script>
+	<script src="js/dungchung.js"></script>
+    <script>
+        window.onload = function () {
+            khoiTao();
+            // thêm tags (từ khóa) vào khung tìm kiếm
+            var tags = ["Samsung", "iPhone", "Huawei", "Oppo"];
+            for (var t of tags) addTags(t, "index.html?search=" + t);
+        }
+    </script>
+
+</head>
+
+<body>
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+
+        <!-- Banner giới thiệu -->
+        <div class="intro-banner">
+            <div class="intro-overlay">
+                <h1>Giới Thiệu Về NDC Shop</h1>
+                <p>Thế giới điện thoại chính hãng - Giá tốt nhất thị trường</p>
+            </div>
+        </div>
+
+        <!-- Nội dung chính -->
+        <div class="intro-container">
+            <!-- Về chúng tôi -->
+            <div class="intro-section">
+                <div class="section-icon">
+                    <i class="fa fa-home"></i>
+                </div>
+                <div class="section-content">
+                    <h2>Chào Mừng Đến Với NDC Shop</h2>
+                    <p>
+                        Tại <strong>NDC Shop</strong>, chúng tôi tự hào là địa chỉ tin cậy hàng đầu cho mọi nhu cầu 
+                        điện thoại thông minh của bạn. Với hơn 5 năm kinh nghiệm trong ngành, chúng tôi cam kết mang 
+                        đến cho khách hàng những sản phẩm chính hãng 100%, giá cả cạnh tranh nhất thị trường.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sản phẩm -->
+            <div class="intro-section">
+                <div class="section-icon">
+                    <i class="fa fa-mobile"></i>
+                </div>
+                <div class="section-content">
+                    <h2>Đa Dạng Sản Phẩm</h2>
+                    <p>
+                        Chúng tôi cung cấp hàng ngàn mẫu điện thoại từ các thương hiệu hàng đầu thế giới như 
+                        <strong>Apple</strong>, <strong>Samsung</strong>, <strong>Huawei</strong>, 
+                        <strong>Oppo</strong>, <strong>Xiaomi</strong> và nhiều hãng khác. Từ phân khúc bình dân 
+                        đến cao cấp, chúng tôi có đầy đủ để đáp ứng mọi nhu cầu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Cam kết -->
+            <div class="intro-section">
+                <div class="section-icon">
+                    <i class="fa fa-shield"></i>
+                </div>
+                <div class="section-content">
+                    <h2>Cam Kết Chất Lượng</h2>
+                    <ul class="intro-list">
+                        <li><i class="fa fa-check-circle"></i> 100% sản phẩm chính hãng, nguyên seal</li>
+                        <li><i class="fa fa-check-circle"></i> Bảo hành chính hãng từ 12-24 tháng</li>
+                        <li><i class="fa fa-check-circle"></i> Đổi trả trong 7 ngày nếu có lỗi</li>
+                        <li><i class="fa fa-check-circle"></i> Hỗ trợ trả góp 0% lãi suất</li>
+                        <li><i class="fa fa-check-circle"></i> Giao hàng miễn phí toàn quốc</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tại sao chọn chúng tôi -->
+            <div class="intro-section highlight">
+                <div class="section-icon">
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="section-content">
+                    <h2>Tại Sao Chọn NDC Shop?</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fa fa-thumbs-up"></i>
+                            <h3>Uy tín</h3>
+                            <p>Hơn 100,000+ khách hàng tin tưởng</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa fa-bolt"></i>
+                            <h3>Nhanh chóng</h3>
+                            <p>Giao hàng trong 24h tại nội thành</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa fa-dollar"></i>
+                            <h3>Giá tốt</h3>
+                            <p>Giá cạnh tranh nhất thị trường</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa fa-headphones"></i>
+                            <h3>Hỗ trợ 24/7</h3>
+                            <p>Tư vấn nhiệt tình, chu đáo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liên hệ -->
+            <div class="intro-section cta-section">
+                <h2>Hãy Đến Với Chúng Tôi!</h2>
+                <p>Khám phá ngay – Mua điện thoại chưa bao giờ dễ dàng và tiện lợi đến thế!</p>
+                <div class="cta-buttons">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fa fa-shopping-cart"></i> Mua Sắm Ngay
+                    </a>
+                    <a href="lienhe.html" class="btn btn-secondary">
+                        <i class="fa fa-phone"></i> Liên Hệ Tư Vấn
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script> addPlc(); </script>
+    </section>
+
+    <script> addContainTaiKhoan(); </script>
+
+    <div class="footer">
+        <script>addFooter();</script>
+        
+    </div>
+
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+</body>
+
+</html>

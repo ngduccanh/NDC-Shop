@@ -1,0 +1,52 @@
+.banner .item img {
+  height: 340px;
+}
+/* 🌟 Nút mũi tên điều hướng banner */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+/* Hiện mũi tên khi hover vào banner */
+.banner:hover .owl-nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Nút mũi tên */
+.owl-nav button {
+  background: rgba(0, 0, 0, 0.25);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owl-nav button:hover {
+  background: #d70018;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(215,0,24,0.35);
+}
+
+/* Canh khoảng cách mép cho mũi tên */
+.owl-prev { margin-left: 15px; }
+.owl-next { margin-right: 15px; }
+.banner {
+    position: relative;
+    overflow: hidden;
+}

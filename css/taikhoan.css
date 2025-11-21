@@ -1,0 +1,387 @@
+/* ============================= */
+/* 🌟 CONTAINER TÀI KHOẢN - CELLPHONES STYLE */
+/* ============================= */
+.containTaikhoan {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  transform: scale(0);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containTaikhoan:not([style*="scale(0)"]) {
+  opacity: 1;
+}
+
+.containTaikhoan .close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2.5rem;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(215, 0, 24, 0.8);
+  border-radius: 50%;
+  z-index: 1000;
+  font-weight: 300;
+}
+
+.containTaikhoan .close:hover {
+  background: #d70018;
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 4px 15px rgba(215, 0, 24, 0.5);
+}
+
+.taikhoan {
+  background: #ffffff;
+  padding: 50px 45px;
+  max-width: 480px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.taikhoan,
+.taikhoan * {
+  box-sizing: border-box;
+}
+
+.taikhoan a {
+  text-decoration: none;
+  color: #d70018;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.taikhoan a:hover {
+  color: #b50014;
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* 🌟 TAB GROUP - ĐĂNG NHẬP/ĐĂNG KÝ */
+/* ============================= */
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px 0;
+  display: flex;
+  background: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-group li {
+  flex: 1;
+}
+
+.tab-group li a {
+  display: block;
+  padding: 16px 20px;
+  background: transparent;
+  color: #666;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tab-group li a:hover {
+  background: rgba(215, 0, 24, 0.1);
+  color: #d70018;
+  text-decoration: none;
+}
+
+.tab-group .active a {
+  background: #d70018;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(215, 0, 24, 0.3);
+}
+
+.tab-group .active a:hover {
+  background: #b50014;
+}
+
+.tab-content>div {
+  display: block;
+}
+
+.tab-content>div:last-child {
+  display: none;
+  /* ẩn signup (last-child của tab-content) lúc mới vào web */
+}
+
+.taikhoan h1 {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  margin: 0 0 30px;
+  font-size: 26px;
+  letter-spacing: -0.5px;
+}
+
+/* ============================= */
+/* 🌟 LABEL - FLOATING EFFECT */
+/* ============================= */
+.taikhoan label {
+  position: absolute;
+  -webkit-transform: translateY(16px);
+  transform: translateY(16px);
+  left: 18px;
+  color: #999;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 15px;
+  font-weight: 500;
+  background: white;
+  padding: 0 4px;
+}
+
+.taikhoan label .req {
+  margin: 0 2px;
+  color: #d70018;
+  font-weight: 600;
+}
+
+.taikhoan label.active {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  left: 14px;
+  font-size: 12px;
+  color: #d70018;
+  font-weight: 600;
+}
+
+.taikhoan label.active .req {
+  opacity: 1;
+}
+
+.taikhoan label.highlight {
+  color: #d70018;
+}
+
+/* ============================= */
+/* 🌟 INPUT FIELDS */
+/* ============================= */
+.taikhoan input,
+.taikhoan textarea {
+  font-size: 15px;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  padding: 14px 16px;
+  background: #fff;
+  background-image: none;
+  border: 2px solid #e0e0e0;
+  color: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+
+.taikhoan input:focus,
+.taikhoan textarea:focus {
+  outline: 0;
+  border-color: #d70018;
+  box-shadow: 0 0 0 4px rgba(215, 0, 24, 0.1);
+  background: #fff;
+}
+
+.taikhoan input:hover {
+  border-color: #d70018;
+}
+
+.taikhoan textarea {
+  border: 2px solid #e0e0e0;
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ============================= */
+/* 🌟 FIELD LAYOUT */
+/* ============================= */
+.field-wrap {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.top-row {
+  display: flex;
+  gap: 12px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.top-row>div {
+  flex: 1;
+  float: left;
+}
+
+.top-row>div:last-child {
+  margin: 0;
+}
+
+/* ============================= */
+/* 🌟 BUTTON SUBMIT */
+/* ============================= */
+.taikhoan .button {
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(215, 0, 24, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.taikhoan .button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.taikhoan .button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.taikhoan .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(215, 0, 24, 0.4);
+}
+
+.taikhoan .button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(215, 0, 24, 0.3);
+}
+
+.taikhoan .button-block {
+  display: block;
+  width: 100%;
+}
+
+.taikhoan .forgot {
+  margin-top: -8px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* 🌟 RESPONSIVE */
+/* ============================= */
+@media (max-width: 600px) {
+  .taikhoan {
+    padding: 35px 25px;
+    width: 95%;
+  }
+  
+  .taikhoan h1 {
+    font-size: 22px;
+  }
+  
+  .tab-group li a {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+  
+  .top-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .containTaikhoan .close {
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 2rem;
+  }
+}
+
+/* ============================= */
+/* 🌟 THÊM LOGO/ICON (optional) */
+/* ============================= */
+.taikhoan::before {
+  content: '🔐';
+  display: block;
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 10px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

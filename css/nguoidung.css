@@ -1,0 +1,284 @@
+/* ============================= */
+/* 🌟 TRANG NGƯỜI DÙNG - CELLPHONES STYLE */
+/* ============================= */
+
+/* Container chính */
+section {
+    background: #f5f5f5;
+    min-height: 100vh;
+    padding: 30px 0;
+}
+
+/* ============================= */
+/* 🌟 THÔNG TIN NGƯỜI DÙNG */
+/* ============================= */
+.infoUser {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.infoUser table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.infoUser table th {
+    background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.infoUser table tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.3s ease;
+}
+
+.infoUser table tr:hover {
+    background: #fafafa;
+}
+
+.infoUser table td {
+    font-size: 16px;
+    padding: 18px 20px;
+    color: #333;
+}
+
+.infoUser table td:first-child {
+    font-weight: 600;
+    text-align: right;
+    color: #666;
+    width: 200px;
+    padding-right: 25px;
+}
+
+.infoUser table td:nth-child(2) {
+    padding-left: 25px;
+}
+
+.infoUser table td:nth-child(3) {
+    text-align: center;
+    width: 80px;
+}
+
+/* Input fields */
+.infoUser input {
+    font-size: 16px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+
+.infoUser input:focus {
+    outline: none;
+    border-color: #d70018;
+    box-shadow: 0 0 0 4px rgba(215, 0, 24, 0.1);
+}
+
+.infoUser input:read-only {
+    border: 2px solid transparent;
+    background: #f9f9f9;
+    cursor: default;
+}
+
+.infoUser input:read-only:focus {
+    box-shadow: none;
+}
+
+/* ============================= */
+/* 🌟 NÚT SỬA THÔNG TIN */
+/* ============================= */
+.infoUser .fa-pencil {
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 10px 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 50px;
+    background: #f5f5f5;
+    color: #666;
+    border: 2px solid #e0e0e0;
+}
+
+.infoUser .fa-pencil:hover {
+    background: #d70018;
+    color: white;
+    border-color: #d70018;
+    transform: scale(1.05);
+}
+
+/* Nút đổi mật khẩu đặc biệt */
+#butDoiMatKhau {
+    background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 12px rgba(215, 0, 24, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#butDoiMatKhau:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(215, 0, 24, 0.4);
+}
+
+/* ============================= */
+/* 🌟 KHUNG ĐỔI MẬT KHẨU */
+/* ============================= */
+#khungDoiMatKhau {
+    padding: 0;
+    background: #fafafa;
+}
+
+#khungDoiMatKhau tr td {
+    padding: 0;
+    border: none;
+}
+
+#khungDoiMatKhau tr td div {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+/* Active state */
+#khungDoiMatKhau.active tr td {
+    padding: 15px 20px;
+}
+
+#khungDoiMatKhau.active td div {
+    max-height: 120px;
+    opacity: 1;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#khungDoiMatKhau table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#khungDoiMatKhau input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+#khungDoiMatKhau input:focus {
+    border-color: #d70018;
+    box-shadow: 0 0 0 4px rgba(215, 0, 24, 0.1);
+    outline: none;
+}
+
+#khungDoiMatKhau button {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(215, 0, 24, 0.3);
+}
+
+#khungDoiMatKhau button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(215, 0, 24, 0.4);
+}
+
+#khungDoiMatKhau button:active {
+    transform: translateY(0);
+}
+
+/* ============================= */
+/* 🌟 DANH SÁCH ĐỖN HÀNG */
+/* ============================= */
+.listDonHang {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    animation: fadeIn 0.5s ease 0.2s backwards;
+}
+
+.listDonHang h2 {
+    color: #d70018;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #d70018;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================= */
+/* 🌟 RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+    .infoUser,
+    .listDonHang {
+        margin: 0 15px 20px;
+        border-radius: 8px;
+    }
+    
+    .infoUser table td:first-child {
+        width: auto;
+        text-align: left;
+        padding-right: 10px;
+    }
+    
+    .infoUser table td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    .infoUser table th {
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    .infoUser input {
+        font-size: 14px;
+        max-width: 100%;
+    }
+}

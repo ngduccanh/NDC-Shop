@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liên hệ - SmartPoint</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/lienhe.css">
+
+    <!-- js -->
+    <script src="data/products.js"></script>
+    <script src="js/dungchung.js"></script>
+    <script src="js/lienhe.js"></script>
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            
+            var form = event.target;
+            var name = form.ht.value;
+            var phone = form.sdt.value;
+            var email = form.em.value;
+            var title = form.tde.value;
+            var content = form.nd.value;
+            
+            // Hiển thị thông báo thành công
+            alert('Cảm ơn ' + name + '!\n\nChúng tôi đã nhận được tin nhắn của bạn và sẽ liên hệ lại sớm nhất có thể qua:\n- Điện thoại: ' + phone + '\n- Email: ' + email);
+            
+            // Reset form
+            form.reset();
+            
+            return false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+
+        <!-- Banner liên hệ -->
+        <div class="contact-banner">
+            <div class="contact-overlay">
+                <h1>Liên Hệ Với Chúng Tôi</h1>
+                <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7</p>
+            </div>
+        </div>
+
+        <!-- Nội dung chính -->
+        <div class="contact-container">
+            
+            <!-- Thông tin liên hệ nhanh -->
+            <div class="quick-contact">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>Hotline</h3>
+                        <a href="tel:0973521509">0973 521 509</a>
+                        <p>Hỗ trợ 24/7</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>Email</h3>
+                        <a href="mailto:canhitneu@gmail.com">canhitneu@gmail.com</a>
+                        <p>Phản hồi trong 24h</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>Địa chỉ</h3>
+                        <p>70 ngõ 176 Trương Định<br>Hai Bà Trưng, Hà Nội</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div class="contact-detail">
+                        <h3>Giờ làm việc</h3>
+                        <p>Thứ 2 - CN: 8:00 - 22:00</p>
+                        <p>Tất cả các ngày trong tuần</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form và Map -->
+            <div class="contact-content">
+                <!-- Form liên hệ -->
+                <div class="contact-form-section">
+                    <h2><i class="fa fa-pencil"></i> Gửi Tin Nhắn Cho Chúng Tôi</h2>
+                    <p class="form-description">Điền thông tin bên dưới, chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.</p>
+                    
+                    <form name="formlh" class="contact-form" onsubmit="return handleContactSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fa fa-user"></i> Họ và tên *</label>
+                                <input type="text" name="ht" placeholder="Nhập họ tên của bạn" autocomplete="off" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa fa-phone"></i> Số điện thoại *</label>
+                                <input type="tel" name="sdt" placeholder="Nhập số điện thoại" pattern="[0-9]{10,11}" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa fa-envelope"></i> Email *</label>
+                            <input type="email" name="em" placeholder="Nhập địa chỉ email" autocomplete="off" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa fa-tag"></i> Tiêu đề *</label>
+                            <input type="text" name="tde" placeholder="Tiêu đề tin nhắn" maxlength="100" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa fa-comment"></i> Nội dung *</label>
+                            <textarea name="nd" rows="5" placeholder="Nhập nội dung tin nhắn..." maxlength="500" required></textarea>
+                            <span class="char-count">Tối đa 500 ký tự</span>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fa fa-paper-plane"></i> Gửi Tin Nhắn
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Bản đồ -->
+                <div class="map-section">
+                    <h2><i class="fa fa-map"></i> Vị Trí Cửa Hàng</h2>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6259777642687!2d105.84310731476299!3d21.00317938600672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac800f450807%3A0x419a49f9f50c8917!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBLaW5oIHThur8gUXXhu5FjIGTDom4!5e0!3m2!1svi!2s!4v1234567890123!5m2!1svi!2s" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Thông tin ngân hàng -->
+                    <div class="bank-info">
+                        <h3><i class="fa fa-credit-card"></i> Thông Tin Chuyển Khoản</h3>
+                        <div class="bank-details">
+                            <p><strong>Ngân hàng:</strong> Vietcombank</p>
+                            <p><strong>Số tài khoản:</strong> 9973521509</p>
+                            <p><strong>Chủ tài khoản:</strong> Nguyen Duc Canh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script> addPlc(); </script>
+    </section>
+
+    <script>
+        addContainTaiKhoan();
+    </script>
+
+    <div class="footer">
+        <script>
+            addFooter();
+        </script>
+
+    </div>
+
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+
+</body>
+
+</html>

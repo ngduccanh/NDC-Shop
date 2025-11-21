@@ -1,0 +1,378 @@
+/* ============================= */
+/* 🌟 BANNER LIÊN HỆ */
+/* ============================= */
+.contact-banner {
+    background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.contact-overlay {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    animation: fadeInDown 0.8s ease;
+}
+
+.contact-overlay h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-overlay p {
+    font-size: 18px;
+    opacity: 0.95;
+}
+
+/* ============================= */
+/* 🌟 CONTAINER */
+/* ============================= */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* ============================= */
+/* 🌟 LIÊN HỆ NHANH */
+/* ============================= */
+.quick-contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(215, 0, 24, 0.15);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d70018 0%, #ff3b5a 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(215, 0, 24, 0.3);
+}
+
+.contact-icon i {
+    font-size: 26px;
+    color: white;
+}
+
+.contact-detail {
+    flex: 1;
+}
+
+.contact-detail h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-detail a {
+    display: block;
+    font-size: 16px;
+    color: #d70018;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 4px;
+    word-break: break-word; /* Ngắt dòng email dài */
+    overflow-wrap: break-word; /* Đảm bảo tương thích */
+}
+
+.contact-detail a:hover {
+    text-decoration: underline;
+}
+
+.contact-detail p {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* 🌟 NỘI DUNG CHÍNH */
+/* ============================= */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* ============================= */
+/* 🌟 FORM LIÊN HỆ */
+/* ============================= */
+.contact-form-section {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-section h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.contact-form-section h2 i {
+    color: #d70018;
+    margin-right: 8px;
+}
+
+.form-description {
+    color: #777;
+    margin-bottom: 28px;
+    font-size: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-group label i {
+    color: #d70018;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #d70018;
+    box-shadow: 0 0 0 3px rgba(215, 0, 24, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.char-count {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(215, 0, 24, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(215, 0, 24, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ============================= */
+/* 🌟 BẢN ĐỒ */
+/* ============================= */
+.map-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.map-section h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.map-section h2 i {
+    color: #d70018;
+    margin-right: 8px;
+}
+
+.map-container {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* ============================= */
+/* 🌟 THÔNG TIN NGÂN HÀNG */
+/* ============================= */
+.bank-info {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bank-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.bank-info h3 i {
+    color: #d70018;
+    margin-right: 8px;
+}
+
+.bank-details p {
+    font-size: 15px;
+    color: #555;
+    line-height: 2;
+    margin: 0;
+}
+
+.bank-details strong {
+    color: #333;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 140px;
+}
+
+/* ============================= */
+/* 🌟 ANIMATIONS */
+/* ============================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================= */
+/* 🌟 RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+    .contact-overlay h1 {
+        font-size: 28px;
+    }
+    
+    .contact-overlay p {
+        font-size: 15px;
+    }
+    
+    .quick-contact {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form-section,
+    .bank-info {
+        padding: 24px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+}

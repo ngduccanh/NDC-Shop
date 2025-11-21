@@ -1,0 +1,329 @@
+/* ============================= */
+/* 🌟 BANNER GIỚI THIỆU */
+/* ============================= */
+.intro-banner {
+    background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.intro-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.intro-overlay {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    animation: fadeInDown 0.8s ease;
+}
+
+.intro-overlay h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.intro-overlay p {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+/* ============================= */
+/* 🌟 CONTAINER CHÍNH */
+/* ============================= */
+.intro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* ============================= */
+/* 🌟 SECTION */
+/* ============================= */
+.intro-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease;
+}
+
+.intro-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(215, 0, 24, 0.15);
+}
+
+.section-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #d70018 0%, #ff3b5a 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(215, 0, 24, 0.3);
+}
+
+.section-icon i {
+    font-size: 36px;
+    color: white;
+}
+
+.section-content {
+    flex: 1;
+}
+
+.section-content h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.section-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.section-content strong {
+    color: #d70018;
+    font-weight: 600;
+}
+
+/* ============================= */
+/* 🌟 DANH SÁCH */
+/* ============================= */
+.intro-list {
+    list-style: none;
+    padding: 0;
+}
+
+.intro-list li {
+    font-size: 16px;
+    line-height: 2;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.intro-list li i {
+    color: #28a745;
+    font-size: 18px;
+}
+
+/* ============================= */
+/* 🌟 SECTION NỔI BẬT */
+/* ============================= */
+.intro-section.highlight {
+    background: linear-gradient(135deg, #fff5f6 0%, #ffffff 100%);
+    border: 2px solid #ffe0e5;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(215, 0, 24, 0.15);
+}
+
+.feature-item i {
+    font-size: 42px;
+    color: #d70018;
+    margin-bottom: 12px;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+/* ============================= */
+/* 🌟 CALL TO ACTION */
+/* ============================= */
+.cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
+    color: white;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background: white;
+    color: #d70018;
+}
+
+.btn-primary:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #d70018;
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* 🌟 ANIMATIONS */
+/* ============================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================= */
+/* 🌟 RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+    .intro-overlay h1 {
+        font-size: 28px;
+    }
+    
+    .intro-overlay p {
+        font-size: 15px;
+    }
+    
+    .intro-section {
+        flex-direction: column;
+        padding: 24px;
+        gap: 20px;
+    }
+    
+    .section-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .section-icon i {
+        font-size: 28px;
+    }
+    
+    .section-content h2 {
+        font-size: 22px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        justify-content: center;
+    }
+}
