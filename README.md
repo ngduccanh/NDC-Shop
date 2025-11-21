@@ -1,6 +1,4 @@
-# DoAn_Web1
-
-Đề án môn web 1, web tĩnh, đề tài trang web bán điện thoại.
+Đề án Công nghệ thông tin, web tĩnh, đề tài: website bán điện thoại.
 
 Giao diện thân thiện, dễ sử dụng, chức năng khá đầy đủ.
 
@@ -20,9 +18,7 @@ Chức năng **ADMIN**:
 
 ## Admin Account: 
 + username: admin
-+ password: adadad
-
-## Screenshots
++ password: 123
 
 
 
