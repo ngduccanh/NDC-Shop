@@ -77,6 +77,20 @@
 
         <!-- Sản Phẩm -->
         <div class="sanpham">
+            <div class="section-header">
+                <h2><i class="fa fa-th-large"></i> Quản Lý Sản Phẩm</h2>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fa fa-search"></i>
+                        <input type="text" id="searchProductInput" placeholder="Tìm kiếm theo tên hoặc mã sản phẩm..." onkeyup="searchProducts()">
+                    </div>
+                    <button class="btn-add-product" onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)'; autoMaSanPham()">
+                        <i class="fa fa-plus-circle"></i>
+                        Thêm Sản Phẩm Mới
+                    </button>
+                </div>
+            </div>
+
             <table class="table-header">
                 <tr>
                     <!-- Theo độ rộng của table content -->
@@ -92,13 +106,6 @@
             <div class="table-content">
             </div>
 
-            <div class="table-footer">
-                <button onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)'; autoMaSanPham()">
-                    <i class="fa fa-plus-square"></i>
-                    Thêm sản phẩm
-                </button>
-            </div>
-
             <div id="khungThemSanPham" class="overlay">
                 <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">&times;</span>
                 <table class="overlayTable table-outline table-content table-header">
@@ -111,7 +118,7 @@
                     </tr>
                     <tr>
                         <td>Tên sản phẩm:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="Ví dụ: iPhone 16 Pro Max 256GB"></td>
                     </tr>
                     <tr>
                         <td>Hãng:</td>
@@ -129,21 +136,21 @@
                     <tr>
                         <td>Hình:</td>
                         <td>
-                            <img class="hinhDaiDien" id="anhDaiDienSanPhamThem" src="">
-                            <input type="file" accept="image/*" onchange="capNhatAnhSanPham(this.files, 'anhDaiDienSanPhamThem')">
+                            <img class="hinhDaiDien" id="anhDaiDienSanPhamThem" src="" alt="Preview">
+                            <input type="file" accept="image/*" onchange="capNhatAnhSanPham(this.files, 'anhDaiDienSanPhamThem')" title="Chọn hình ảnh sản phẩm">
                         </td>
                     </tr>
                     <tr>
                         <td>Giá tiền:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="25000000"></td>
                     </tr>
                     <tr>
-                        <td>Số sao (số nguyên 0->5):</td>
-                        <td><input type="text"></td>
+                        <td>Số sao (0-5):</td>
+                        <td><input type="number" min="0" max="5" placeholder="5"></td>
                     </tr>
                     <tr>
-                        <td>Đánh giá (số nguyên):</td>
-                        <td><input type="text"></td>
+                        <td>Đánh giá:</td>
+                        <td><input type="number" min="0" placeholder="1000"></td>
                     </tr>
                     <tr>
                         <td>Khuyến mãi:</td>
@@ -158,46 +165,46 @@
                     </tr>
                     <tr>
                         <td>Giá trị khuyến mãi:</td>
-                        <td><input type="text" placeholder=""></td>
+                        <td><input type="text" placeholder="Ví dụ: 23.000.000 ₫"></td>
                     </tr>
                     <tr>
                         <th colspan="2">Thông số kĩ thuật</th>
                     </tr>
                     <tr>
                         <td>Màn hình:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder='6.7", Super Retina XDR'></td>
                     </tr>
                     <tr>
                         <td>Hệ điều hành:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="iOS 18"></td>
                     </tr>
                     <tr>
                         <td>Camara sau:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="48MP + 12MP + 12MP"></td>
                     </tr>
                     <tr>
                         <td>Camara trước:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="12MP"></td>
                     </tr>
                     <tr>
                         <td>CPU:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="Apple A18 Pro"></td>
                     </tr>
                     <tr>
                         <td>RAM:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="8GB"></td>
                     </tr>
                     <tr>
                         <td>Bộ nhớ trong:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="256GB"></td>
                     </tr>
                     <tr>
                         <td>Thẻ nhớ:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="Không hỗ trợ"></td>
                     </tr>
                     <tr>
                         <td>Dung lượng Pin:</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" placeholder="4685mAh"></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="table-footer"> <button onclick="themSanPham()">THÊM</button> </td>

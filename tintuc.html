@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous">
 
+    <script src="js/Jquery/Jquery.min.js"></script>
+
     <!-- our files -->
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
@@ -23,6 +25,7 @@
 
     <!-- js -->
     <script src="data/products.js"></script>
+    <script src="js/classes.js"></script>
 	<script src="js/dungchung.js"></script>
     <script>
         window.onload = function () {
@@ -30,6 +33,48 @@
             // thêm tags (từ khóa) vào khung tìm kiếm
             var tags = ["Samsung", "iPhone", "Huawei", "Oppo"];
             for (var t of tags) addTags(t, "index.html?search=" + t);
+            
+            // Khởi tạo chức năng lọc tin tức
+            initNewsFilter();
+        }
+        
+        function initNewsFilter() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const newsCards = document.querySelectorAll('.news-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Xóa active khỏi tất cả buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Thêm active cho button được click
+                    this.classList.add('active');
+                    
+                    const filterValue = this.textContent.trim().toLowerCase();
+                    let visibleCount = 0;
+                    
+                    newsCards.forEach((card, index) => {
+                        if (filterValue === 'tất cả') {
+                            card.style.display = 'block';
+                            // Animation fade in với delay dần
+                            setTimeout(() => {
+                                card.style.animation = 'fadeIn 0.5s ease';
+                            }, index * 50);
+                            visibleCount++;
+                        } else {
+                            const brandData = card.getAttribute('data-brand');
+                            if (brandData === filterValue) {
+                                card.style.display = 'block';
+                                setTimeout(() => {
+                                    card.style.animation = 'fadeIn 0.5s ease';
+                                }, visibleCount * 50);
+                                visibleCount++;
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
         }
     </script>
 
@@ -66,7 +111,7 @@
             <!-- Grid tin tức -->
             <div class="news-grid">
                 <!-- Bài viết 1 -->
-                <article class="news-card">
+                <article class="news-card" data-brand="apple">
                     <a href="https://support.apple.com/vi-vn/121032" target="_blank">
                         <div class="news-image">
                             <img src="img/tintuc/tintuc1.png" alt="iPhone 16">
@@ -87,7 +132,7 @@
                 </article>
 
                 <!-- Bài viết 2 -->
-                <article class="news-card">
+                <article class="news-card" data-brand="apple">
                     <a href="https://thanhnien.vn/cong-nghe/kham-pha-smartphone-man-hinh-gap-duoc-dau-tien-cua-samsung-1027111.html" target="_blank">
                         <div class="news-image">
                             <img src="img/tintuc/tintuc2.png" alt="Titanium Design">
@@ -108,7 +153,7 @@
                 </article>
 
                 <!-- Bài viết 3 -->
-                <article class="news-card">
+                <article class="news-card" data-brand="huawei">
                     <a href="https://laodongthudo.vn/huawei-ra-mat-dien-thoai-mate-xt-gap-3-dau-tien-tren-the-gioi-co-gia-2800usd-177133.html" target="_blank">
                         <div class="news-image">
                             <img src="img/tintuc/tintuc3.png" alt="Huawei Mate XT">
@@ -129,7 +174,7 @@
                 </article>
 
                 <!-- Bài viết 4 -->
-                <article class="news-card">
+                <article class="news-card" data-brand="samsung">
                     <a href="http://vietq.vn/chiec-dien-thoai-thong-minh-nay-cua-lg-se-co-toi-16-camera-d151674.html" target="_blank">
                         <div class="news-image">
                             <img src="img/tintuc/tintuc4.jpg" alt="Samsung S25 Ultra">
@@ -150,7 +195,7 @@
                 </article>
 
                 <!-- Bài viết 5 -->
-                <article class="news-card">
+                <article class="news-card" data-brand="oppo">
                     <a href="https://www.viettablet.com/oppo-find-x8-va-x8-pro-ra-mat" target="_blank">
                         <div class="news-image">
                             <img src="img/tintuc/tintuc5.jpg" alt="OPPO Find X8">
@@ -170,7 +215,7 @@
                 </article>
 
                 <!-- Bài viết 6 - Placeholder -->
-                <article class="news-card">
+                <article class="news-card" data-brand="apple">
                     <a href="#" target="_blank">
                         <div class="news-image">
                             <img src="img/tintuc/tintuc1.png" alt="Tin tức công nghệ">

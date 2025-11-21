@@ -27,7 +27,7 @@ function addProductToTable(user) {
 				</div>
 				<h3>Bạn chưa đăng nhập</h3>
 				<p>Vui lòng đăng nhập để xem giỏ hàng của bạn</p>
-				<a href="javascript:void(0)" onclick="document.querySelector('.header .login').click()" class="login-btn">
+				<a href="javascript:void(0)" onclick="showTaiKhoan(true)" class="login-btn">
 					<i class="fa fa-sign-in"></i> Đăng nhập ngay
 				</a>
 			</div>

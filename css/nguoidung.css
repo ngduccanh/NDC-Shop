@@ -5,8 +5,7 @@
 /* Container chính */
 section {
     background: #f5f5f5;
-    min-height: 100vh;
-    padding: 30px 0;
+    padding: 30px 0 50px;
 }
 
 /* ============================= */
@@ -229,26 +228,191 @@ section {
 }
 
 /* ============================= */
-/* 🌟 DANH SÁCH ĐỖN HÀNG */
+/* 🌟 DANH SÁCH ĐƠN HÀNG */
 /* ============================= */
 .listDonHang {
     max-width: 1200px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 30px;
+    margin: 0 auto 30px;
+    padding: 0;
     animation: fadeIn 0.5s ease 0.2s backwards;
 }
 
 .listDonHang h2 {
     color: #d70018;
-    font-size: 24px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 3px solid #d70018;
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding: 20px 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: center;
+    border-left: 5px solid #d70018;
+}
+
+.listDonHang h3 {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 20px 0;
+}
+
+/* Bảng đơn hàng */
+.listDonHang .listSanPham {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+    transition: all 0.3s ease;
+}
+
+.listDonHang .listSanPham:hover {
+    box-shadow: 0 6px 24px rgba(215, 0, 24, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Header của bảng */
+.listDonHang .listSanPham tr:first-child th {
+    background: linear-gradient(135deg, #d70018 0%, #b50014 100%);
+    padding: 20px;
+    border: none;
+}
+
+.listDonHang .listSanPham tr:first-child th h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+    border-radius: 0;
+}
+
+/* Tiêu đề cột */
+.listDonHang .listSanPham tr:nth-child(2) th {
+    background: #f8f8f8;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    padding: 15px 12px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Các dòng sản phẩm */
+.listDonHang .listSanPham tr td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.listDonHang .listSanPham tr:hover td {
+    background: #fafafa;
+}
+
+/* Cột STT */
+.listDonHang .listSanPham td:first-child {
+    text-align: center;
+    font-weight: 600;
+    color: #666;
+    width: 60px;
+}
+
+/* Cột sản phẩm */
+.listDonHang .listSanPham td.noPadding {
+    padding: 0;
+}
+
+.listDonHang .listSanPham td.noPadding a {
+    display: flex;
+    align-items: center;
+    padding: 16px 12px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.listDonHang .listSanPham td.noPadding a:hover {
+    color: #d70018;
+    background: #fff5f5;
+}
+
+.listDonHang .listSanPham td.noPadding img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-left: 15px;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.listDonHang .listSanPham td.noPadding a:hover img {
+    transform: scale(1.1);
+    border-color: #d70018;
+}
+
+/* Cột giá và thành tiền */
+.listDonHang .listSanPham td.alignRight {
+    text-align: right;
+    font-weight: 600;
+    color: #d70018;
+    font-size: 16px;
+}
+
+/* Cột số lượng */
+.listDonHang .listSanPham td.soluong {
+    text-align: center;
+    font-weight: 700;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Dòng tổng tiền */
+.listDonHang .listSanPham tr:last-child {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+    border-top: 2px solid #d70018;
+}
+
+.listDonHang .listSanPham tr:last-child td {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    padding: 20px 12px;
+    border: none;
+}
+
+.listDonHang .listSanPham tr:last-child td:nth-child(2) {
+    color: #d70018;
+    font-size: 20px;
+}
+
+.listDonHang .listSanPham tr:last-child td:last-child {
+    text-align: center;
+    color: #28a745;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #e8f5e9;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+/* Đường phân cách giữa các đơn */
+.listDonHang hr {
+    display: none;
 }
 
 /* ============================= */

@@ -230,44 +230,112 @@ function timKiemSanPham(inp) {
     }
 }
 
+// Tìm kiếm sản phẩm mới - tìm cả tên và mã
+function searchProducts() {
+    var searchText = document.getElementById('searchProductInput').value.toLowerCase().trim();
+    var listTr = document.getElementsByClassName('sanpham')[0].getElementsByClassName('table-content')[0].getElementsByTagName('tr');
+    
+    var count = 0;
+    for (var tr of listTr) {
+        var tds = tr.getElementsByTagName('td');
+        if (tds.length > 0) {
+            var masp = tds[1].innerText.toLowerCase();
+            var tensp = tds[2].innerText.toLowerCase();
+            
+            if (masp.includes(searchText) || tensp.includes(searchText)) {
+                tr.style.display = '';
+                count++;
+            } else {
+                tr.style.display = 'none';
+            }
+        }
+    }
+    
+    // Hiển thị thông báo nếu không tìm thấy
+    if (count === 0 && searchText !== '') {
+        showNoProductsMessage();
+    } else {
+        hideNoProductsMessage();
+    }
+}
+
+function showNoProductsMessage() {
+    var tc = document.getElementsByClassName('sanpham')[0].getElementsByClassName('table-content')[0];
+    if (!document.getElementById('noProductsMessage')) {
+        var msg = document.createElement('div');
+        msg.id = 'noProductsMessage';
+        msg.style.cssText = 'padding: 40px; text-align: center; color: #9aa2a9; font-size: 16px;';
+        msg.innerHTML = '<i class="fa fa-search" style="font-size: 48px; display: block; margin-bottom: 15px; color: #555a60;"></i>Không tìm thấy sản phẩm nào';
+        tc.appendChild(msg);
+    }
+}
+
+function hideNoProductsMessage() {
+    var msg = document.getElementById('noProductsMessage');
+    if (msg) {
+        msg.remove();
+    }
+}
+
 // Thêm
 let previewSrc; // biến toàn cục lưu file ảnh đang thêm
 function layThongTinSanPhamTuTable(id) {
     var khung = document.getElementById(id);
     var tr = khung.getElementsByTagName('tr');
 
-    var masp = tr[1].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var name = tr[2].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    var masp = tr[1].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var name = tr[2].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
     var company = tr[3].getElementsByTagName('td')[1].getElementsByTagName('select')[0].value;
     var img = tr[4].getElementsByTagName('td')[1].getElementsByTagName('img')[0].src;
-    var price = tr[5].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var star = tr[6].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var rateCount = tr[7].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    var price = tr[5].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var star = tr[6].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var rateCount = tr[7].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
     var promoName = tr[8].getElementsByTagName('td')[1].getElementsByTagName('select')[0].value;
-    var promoValue = tr[9].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    var promoValue = tr[9].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
 
-    var screen = tr[11].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var os = tr[12].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var camara = tr[13].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var camaraFront = tr[14].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var cpu = tr[15].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var ram = tr[16].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var rom = tr[17].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var microUSB = tr[18].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var battery = tr[19].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    var screen = tr[11].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var os = tr[12].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var camara = tr[13].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var camaraFront = tr[14].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var cpu = tr[15].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var ram = tr[16].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var rom = tr[17].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var microUSB = tr[18].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
+    var battery = tr[19].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value.trim();
 
-    if(isNaN(price)) {
-        alert('Giá phải là số nguyên');
+    // Validation
+    if(!masp) {
+        alert('Vui lòng nhập mã sản phẩm!');
         return false;
     }
 
-    if(isNaN(star)) {
-        alert('Số sao phải là số nguyên');
+    if(!name) {
+        alert('Vui lòng nhập tên sản phẩm!');
         return false;
     }
 
-    if(isNaN(rateCount)) {
-        alert('Số đánh giá phải là số nguyên');
+    if(!img || img.includes('about:blank')) {
+        alert('Vui lòng chọn hình ảnh cho sản phẩm!');
+        return false;
+    }
+
+    if(!price || isNaN(price)) {
+        alert('Giá phải là số nguyên hợp lệ!');
+        return false;
+    }
+
+    if(!star || isNaN(star) || star < 0 || star > 5) {
+        alert('Số sao phải là số nguyên từ 0 đến 5!');
+        return false;
+    }
+
+    if(!rateCount || isNaN(rateCount) || rateCount < 0) {
+        alert('Số đánh giá phải là số nguyên không âm!');
+        return false;
+    }
+
+    if(!promoValue) {
+        alert('Vui lòng nhập giá trị khuyến mãi!');
         return false;
     }
 
@@ -307,12 +375,12 @@ function themSanPham() {
 
     for(var p of list_products) {
         if(p.masp == newSp.masp) {
-            alert('Mã sản phẩm bị trùng !!');
+            alert('❌ Mã sản phẩm "' + newSp.masp + '" đã tồn tại!\nVui lòng sử dụng mã khác.');
             return false;
         }
 
         if(p.name == newSp.name) {
-            alert('Tên sản phẩm bị trùng !!');
+            alert('❌ Tên sản phẩm "' + newSp.name + '" đã tồn tại!\nVui lòng sử dụng tên khác.');
             return false;
         }
     }
@@ -325,8 +393,24 @@ function themSanPham() {
      // Vẽ lại table
      addTableProducts();
 
-    alert('Thêm sản phẩm "' + newSp.name + '" thành công.');
+    alert('✅ Thêm sản phẩm "' + newSp.name + '" thành công!\n\nMã sản phẩm: ' + newSp.masp + '\nGiá: ' + newSp.price + ' ₫');
     document.getElementById('khungThemSanPham').style.transform = 'scale(0)';
+    
+    // Reset form
+    resetFormThemSanPham();
+}
+
+function resetFormThemSanPham() {
+    var khung = document.getElementById('khungThemSanPham');
+    var inputs = khung.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        if(inputs[i].type !== 'file') {
+            inputs[i].value = '';
+        }
+    }
+    document.getElementById('anhDaiDienSanPhamThem').src = '';
+    previewSrc = null;
+    autoMaSanPham();
 }
 function autoMaSanPham(company) {
     // hàm tự tạo mã cho sản phẩm mới
